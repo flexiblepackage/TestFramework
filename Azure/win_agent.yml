@@ -1,3 +1,5 @@
+# This is Azure DevOps example
+
 # Starter pipeline
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
@@ -13,12 +15,10 @@
 
 pool:
   name: windows
-#Your build pipeline references the ‘Project’ variable, which you’ve selected to be settable at queue time. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab, and then select the option to make it settable at queue time. See https://go.microsoft.com/fwlink/?linkid=865971
-#Your build pipeline references the ‘Robot’ variable, which you’ve selected to be settable at queue time. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab, and then select the option to make it settable at queue time. See https://go.microsoft.com/fwlink/?linkid=865971
 
 steps:
 - script: |
-   robot --pythonpath . --variablefile .\environment\kevin.yml -d .\results\ -T -x result.xml .\RobotExample\TestCase\$(Robot).robot
+   robot --pythonpath . -d .\results\ -T -x result.xml .\RobotExample\TestCase\$(Robot).robot
    if %ERRORLEVEL% GTR 1 ( exit 1 ) else (exit 0)
   displayName: 'Run Test'
 
