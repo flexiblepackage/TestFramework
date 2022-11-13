@@ -84,7 +84,6 @@ class UartAPI:
                 sp = self._udt[com][0]
                 for i in list(cmd):
                     sp.write(i.encode())
-                    # DON'T remove this line, or long cmd may loss bytes.
                     time.sleep(1/1000)
                 sp.write(("\n").encode())
 

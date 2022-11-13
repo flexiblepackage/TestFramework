@@ -11,13 +11,11 @@ class Example(TemplateAPI, UartAPI):
     def __Login(self, account, password):
         super().Login(account, password)
 
-
-    # @UartAPI.Record #for embedded system log record
-    @TemplateAPI.Catch
-    def TestExample(self, caps, implicit, targetDUT, router, routerPW, delay, *args, **kwargs):
-        self.__InitApp(caps, implicit)
-        self.__Login(targetDUT, router, routerPW, **kwargs)
-
-        time.sleep(int(delay))
+    @UartAPI.Record  # for embedded system log record
+    @TemplateAPI.Catch  # for exception return
+    def TestExample(self, *args, **kwargs):
+        ...
+        ...
+        ...
+        print("it's a test script")
         return str(0)
-
