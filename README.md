@@ -37,5 +37,11 @@ You can make your test cases into web APIs,
 
 that will execute the tests and present the results when someone visits your web page.
 
+for example:
 
+https://test-framework-lilac.vercel.app/
+
+Excute test case by visit
+
+https://test-framework-lilac.vercel.app/api
 
