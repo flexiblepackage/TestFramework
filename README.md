@@ -1,5 +1,6 @@
 ## What does it do
 Testframework is based on Robotframework and Python to build an environment for IoT products integration tests.
+
 Including selenium for webs, appium for iOS and Android, and serial port API to filter embedded system debug logs.
 
 ## How do I use it
@@ -24,8 +25,17 @@ Build your script here at Android/App/Template and import it from the RobotExamp
 
 ## CI Services
 You can use variables to define which test case will be execute.
-for example: robot --pythonpath . -d ./results/ -T -x result.xml ./Robot/TestCase/$(Robot).robot
+
+For example: robot --pythonpath . -d ./results/ -T -x result.xml ./Robot/TestCase/$(Robot).robot
+
 P.S. Azure DevOps is recommended because I like it.
+
+
+## Serverless hosting
+
+You can make your test cases into web APIs,
+
+that will execute the tests and present the results when someone visits your web page.
 
 
 
