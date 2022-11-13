@@ -15,7 +15,8 @@ class listen():
     ROBOT_LISTENER_API_VERSION = 2
 
     def end_test(self, name, attrs):
-        result.value = str.format("{}\n{}\n{}\n{}",
+        result.value = str.format("{}\n{}\n{}\n{}\n{}",
+                                  "This is a example which execute web.robot and shows result"
                                   "StartTime: "+attrs['starttime'],
                                   "TestCase: "+name,
                                   "Result: " + attrs['status'],
