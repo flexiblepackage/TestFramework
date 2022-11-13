@@ -1,0 +1,12 @@
+{
+    "platformName": "iOS",
+    "appium:automationName": "XCUITest",
+    "appium:udid": "auto",
+    "appium:platformVersion": "16",
+    "appium:deviceName": "iPhone 12",
+    "appium:newCommandTimeout": "0",
+    "appium:app": "",
+    "appium:autoAcceptAlerts": "true",
+    "appium:noReset": "false",
+    "appium:fullReset": "false"
+}

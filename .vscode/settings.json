@@ -1,0 +1,16 @@
+{
+    
+    "robotcode.debug.attachPython": true,
+    "robotcode.robot.pythonPath": 
+    [
+        "./lib",
+        "./resources",
+        "./"
+    ],
+    "robotcode.robot.args": 
+    [
+        "-T",
+        
+
+    ], 
+}

@@ -1,0 +1,8 @@
+appium-python-client
+pyserial
+PyYAML
+robotframework
+selenium
+webdriver-manager
+packaging
+robotframework-httpctrl

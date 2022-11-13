@@ -1,0 +1,47 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+# schedules:
+#   - cron: "*/5 * * * *"
+#     always: true
+#     displayName: every 5 minutes
+#     branches:
+#       include:
+#         - main
+
+pool:
+  name: Mac
+#Your build pipeline references the ‘Project’ variable, which you’ve selected to be settable at queue time. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab, and then select the option to make it settable at queue time. See https://go.microsoft.com/fwlink/?linkid=865971
+#Your build pipeline references the ‘Robot’ variable, which you’ve selected to be settable at queue time. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab, and then select the option to make it settable at queue time. See https://go.microsoft.com/fwlink/?linkid=865971
+
+steps:
+- script: |
+   robot --pythonpath . --variablefile ./environment/template.yml -d ./results/ -T -x result.xml ./Robot/TestCase/$(Robot).robot
+   if [ "$?" -gt 1 ] ; 
+   then exit 1 
+   else exit 0 
+   fi   
+  displayName: 'Run Test'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Upload results'
+  inputs:
+    PathtoPublish: '$(System.DefaultWorkingDirectory)/results/'
+    ArtifactName: results
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Upload logs'
+  inputs:
+    PathtoPublish: '$(System.DefaultWorkingDirectory)/logs/'
+    ArtifactName: logs
+
+- task: PublishTestResults@2
+  displayName: 'Publish Result'
+  inputs:
+    testResultsFiles: 'result-*.xml'
+    searchFolder: '$(System.DefaultWorkingDirectory)/results/'
+    publishRunAttachments: false
+    failTaskOnFailedTests: true
+          
