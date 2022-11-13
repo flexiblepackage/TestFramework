@@ -15,11 +15,11 @@ class listen():
     ROBOT_LISTENER_API_VERSION = 2
 
     def end_test(self, name, attrs):
-        result.value = str.format("{}\n{} {}\n{}",
-                                  "StartTime = "+attrs['starttime'],
+        result.value = str.format("{}\n{}\n{}\n{}",
+                                  "StartTime: "+attrs['starttime'],
                                   "TestCase: "+name,
                                   "Result: " + attrs['status'],
-                                  "EndTime = "+attrs['endtime']
+                                  "EndTime: "+attrs['endtime']
                                   )
 
 
