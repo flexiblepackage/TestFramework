@@ -2,12 +2,6 @@
 Testframework is based on Robotframework and Python to build an environment for IoT products integration tests.
 Including selenium for webs, appium for iOS and Android, and serial port API to filter embedded system debug logs.
 
-
-## Environments
-- Locally on Mac, or Windows ("RobotExample" folder for example).
-- CI services: such as Jenkins, Azure DevOps ("CI Configs" folder for example).
-- Serverless hosting such as Vercel (see "api" folder for example).
-
 ## How do I use it
 - for mobile tests for example:
 
@@ -22,7 +16,10 @@ Build your script here at Android/App/Template and import it from the RobotExamp
 ![Screenshot 2022-11-13 144815](https://user-images.githubusercontent.com/98958185/201509552-62ccebad-1924-4fe8-a13b-769744c3f564.png)
 
 
-
+## Environments
+- Locally on Mac, or Windows ("RobotExample" folder for example).
+- CI services: such as Jenkins, Azure DevOps ("CI Configs" folder for example).
+- Serverless hosting such as Vercel (see "api" folder for example).
 
 
 
