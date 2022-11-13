@@ -41,7 +41,7 @@ for example:
 
 https://test-framework-lilac.vercel.app/
 
-Excute test case by visit
+Excute test case by visit "api"
 
 https://test-framework-lilac.vercel.app/api
 
