@@ -32,7 +32,6 @@ P.S. Azure DevOps is recommended because I like it.
 
 
 ## Serverless hosting
-
 You can make your test cases into web APIs,
 
 that will execute the tests and present the results when someone visits your web page.
