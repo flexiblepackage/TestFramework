@@ -53,7 +53,7 @@ Do App Test
 
          
 *** Test Cases ***
-App Process  
+App Test Example  
     FOR    ${COUNT}    IN RANGE    ${CYCLE} 
     Run Keyword And Continue On Failure    Do App Test        ${COUNT}         
     END
