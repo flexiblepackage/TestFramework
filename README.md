@@ -25,8 +25,6 @@ You can use variables to define which test case will be execute.
 For example:   
 robot --pythonpath . -d ./results/ -T -x result.xml ./Robot/TestCase/$(Robot).robot
 
-P.S. Azure DevOps is recommended because I like it.
-
 
 ## Serverless hosting
 You can make your test cases into web APIs,  
