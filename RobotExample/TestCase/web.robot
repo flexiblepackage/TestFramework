@@ -21,7 +21,7 @@ Do Web Test
 
 
 *** Test Cases ***
-Web Process  
+Web Test Example  
     FOR    ${COUNT}    IN RANGE    ${CYCLE} 
     Run Keyword And Continue On Failure    Do Web Test        ${COUNT}         
     END
