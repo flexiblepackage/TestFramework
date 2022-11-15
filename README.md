@@ -33,6 +33,6 @@ that will execute the tests and present the results when someone visits your web
 For example:  
 https://test-framework-lilac.vercel.app/
 
-Excute test case by visit "api"  
+Execute test case by visit "api"  
 https://test-framework-lilac.vercel.app/api
 
