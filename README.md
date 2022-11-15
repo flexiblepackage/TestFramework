@@ -20,7 +20,7 @@ Build your script here at Android/App/Template and import it from the RobotExamp
 
 
 ## CI services
-You can use variables to define which test case will be execute.
+You can use variables to define which test case will be executed.
 
 For example:   
 robot --pythonpath . -d ./results/ -T -x result.xml ./Robot/TestCase/$(Robot).robot
