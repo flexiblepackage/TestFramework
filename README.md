@@ -19,7 +19,7 @@ Build your script here at Android/App/Template and import it from the RobotExamp
 - Serverless hosting such as Vercel (see "api" folder for example).
 
 
-## CI Services
+## CI services
 You can use variables to define which test case will be execute.
 
 For example:   
